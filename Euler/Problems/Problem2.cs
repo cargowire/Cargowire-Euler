@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using Euler.Common;
+using Cargowire.Euler.Common;
 
-namespace Euler.Problems
+namespace Cargowire.Euler.Problems
 {
     public class Problem2 : IntEulerItem
     {

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-using Euler.Common;
-using Euler.Problems;
+using Cargowire.Euler.Common;
+using Cargowire.Euler.Problems;
 
-namespace Euler
+namespace Cargowire.Euler
 {
     public class Program
     {
@@ -51,7 +51,7 @@ namespace Euler
             // Get all problems and add them to list
             foreach (Type type in asm.GetTypes())
             {
-                if ((type.Namespace == "Euler.Problems")
+                if ((type.Namespace == "Cargowire.Euler.Problems")
                     && (type.GetInterface(typeof(IEulerItem).FullName) != null))
                 {
                     try
