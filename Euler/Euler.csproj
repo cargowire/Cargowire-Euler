@@ -53,6 +53,7 @@
     <Compile Include="Common\DoubleEulerItem.cs" />
     <Compile Include="Common\Generic\IEulerItem.cs" />
     <Compile Include="Common\Math.cs" />
+    <Compile Include="Problems\Problem11.cs" />
     <Compile Include="Problems\Problem10.cs" />
     <Compile Include="Problems\Problem9.cs" />
     <Compile Include="Problems\Problem8.cs" />
