@@ -9,8 +9,8 @@
 *.dll.config
 # Directories #
 ###############
-/bin
-/obj
+bin/
+obj/
 # Packages #
 ############
 # Don't store zips
@@ -29,3 +29,4 @@
 .DS_Store
 ehthumbs.db
 Thumbs.db
+*.user
