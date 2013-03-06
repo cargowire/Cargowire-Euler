@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Cargowire.Euler.Common;
+﻿using Cargowire.Euler.Common;
 
 namespace Cargowire.Euler.Problems
 {
@@ -25,20 +20,14 @@ Find the sum of all the even-valued terms in the sequence which do not exceed fo
             }
         }
 
-        public override int Calculate()
+        public Problem2() :
+            this(new Solution2())
         {
-            int ret = 0;
-            int start = 1;
-            int end = 2;
-            while (end < 4000000)
-            {
-                // 1 isn't even so don't include that and don't do start as it repeats
-                if(end % 2 == 0) ret += end;
-                int tmp = end;
-                end = start + end;
-                start = tmp;
-            }
-            return ret;
+        }
+
+        public Problem2(IProblemSolver<Problem2, int> solver)
+            : base((IProblemSolver<IEulerItem<string, int>, int>)solver)
+        {
         }
     }
 }

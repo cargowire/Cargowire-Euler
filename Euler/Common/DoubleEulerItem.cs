@@ -1,12 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Cargowire.Euler.Common
 {
-    public abstract class DoubleEulerItem : CacheEulerItem<string,double>, IEulerItem
+    public abstract class DoubleEulerItem : BaseEulerItem<string, double>, IEulerItem
     {
-        public override abstract double Calculate();
+        public DoubleEulerItem()
+        {
+        }
+
+        public DoubleEulerItem(IProblemSolver<IEulerItem<string, double>, double> solver)
+            : base(solver)
+        {
+        }
     }
 }

@@ -20,10 +20,14 @@ namespace Cargowire.Euler
             PopulateProblemList();
             OutputInstructions();
             string cont = Console.ReadLine();
-            while(int.TryParse(cont, out _problemNumber) || cont == "ls") {
+            while(int.TryParse(cont, out _problemNumber) || cont == "ls")
+            {
                 if (_problemNumber > 0)
+                {
                     OutputProblem(_problemNumber);
-                else if(cont == "ls") {
+                }
+                else if (cont == "ls")
+                {
                     _problemNumber = 0;
                     OutputAllProblems();
                 }
@@ -57,8 +61,9 @@ namespace Cargowire.Euler
                     try
                     {
                         _eulerProblems.Add(Convert.ToInt32(type.Name.Substring(7)), Activator.CreateInstance(type) as IEulerItem);
-                    }catch(FormatException){}
-                    catch (OverflowException){}
+                    }
+                    catch(FormatException) {}
+                    catch (OverflowException) {}
                 }
             }
         }
@@ -70,14 +75,18 @@ namespace Cargowire.Euler
             {
                 count++;
                 OutputProblem(problem);
-                if (count != _eulerProblems.Count) Console.ReadLine();
+                if (count != _eulerProblems.Count)
+                {
+                    Console.ReadLine();
+                }
             }
         }
         public static void OutputProblem(int problemNumber)
         {
             OutputProblem(_eulerProblems[problemNumber]);
         }
-        public static void OutputProblem(IEulerItem problem) {
+        public static void OutputProblem(IEulerItem problem) 
+        {
             if (problem != null)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;

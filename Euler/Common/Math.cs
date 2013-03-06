@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Cargowire.Euler
 {
@@ -23,6 +20,7 @@ namespace Cargowire.Euler
                 if (nums[k] != nums[nums.Length - k - 1])
                     return false;
             }
+
             return true;
         }
     }

@@ -1,30 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 using Cargowire.Euler.Common;
 
 namespace Cargowire.Euler.Problems
 {
-    public class Problem10 : LongEulerItem
+    public class Solution10 : BaseProblemSolver<Problem10, long>
     {
-        private const long CONFIRMED_ANSWER = 142913828922;
-        public override long ConfirmedAnswer
-        {
-            get { return CONFIRMED_ANSWER; }
-        }
-        public override string Problem {
-            get
-            {
-                return @"The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
-
-Find the sum of all the primes below two million.";
-            }
-        }
-
-        /// <summary></summary>
-        /// <returns></returns>
         public override long Calculate()
         {
             long num = 7;

@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Euler</RootNamespace>
     <AssemblyName>Euler</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -32,6 +32,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -65,7 +66,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\Generic\CacheEulerItem.cs" />
+    <Compile Include="Common\Generic\BaseProblemSolver.cs" />
+    <Compile Include="Common\Generic\BaseEulerItem.cs" />
+    <Compile Include="Common\Generic\InlineSolver.cs" />
+    <Compile Include="Common\Generic\IProblemSolver.cs" />
     <Compile Include="Common\LongEulerItem.cs" />
     <Compile Include="Common\IntEulerItem.cs" />
     <Compile Include="Common\StringEulerItem.cs" />
@@ -73,17 +77,30 @@
     <Compile Include="Common\DoubleEulerItem.cs" />
     <Compile Include="Common\Generic\IEulerItem.cs" />
     <Compile Include="Common\Math.cs" />
-    <Compile Include="Problems\Problem11.cs" />
-    <Compile Include="Problems\Problem10.cs" />
-    <Compile Include="Problems\Problem9.cs" />
-    <Compile Include="Problems\Problem8.cs" />
-    <Compile Include="Problems\Problem7.cs" />
-    <Compile Include="Problems\Problem6.cs" />
-    <Compile Include="Problems\Problem5.cs" />
-    <Compile Include="Problems\Problem4.cs" />
-    <Compile Include="Problems\Problem3.cs" />
-    <Compile Include="Problems\Problem2.cs" />
-    <Compile Include="Problems\Problem1.cs" />
+    <Compile Include="Problems\Problem10\Solution10.cs" />
+    <Compile Include="Problems\Problem11\Solution11.cs" />
+    <Compile Include="Problems\Problem12\Problem12.cs" />
+    <Compile Include="Problems\Problem11\Problem11.cs" />
+    <Compile Include="Problems\Problem10\Problem10.cs" />
+    <Compile Include="Problems\Problem12\Solution12BruteForce.cs" />
+    <Compile Include="Problems\Problem1\Solution1.cs" />
+    <Compile Include="Problems\Problem2\Solution2.cs" />
+    <Compile Include="Problems\Problem3\Solution3.cs" />
+    <Compile Include="Problems\Problem4\Solution4.cs" />
+    <Compile Include="Problems\Problem5\Solution5.cs" />
+    <Compile Include="Problems\Problem6\Solution6.cs" />
+    <Compile Include="Problems\Problem7\Solution7.cs" />
+    <Compile Include="Problems\Problem8\Solution8.cs" />
+    <Compile Include="Problems\Problem9\Problem9.cs" />
+    <Compile Include="Problems\Problem8\Problem8.cs" />
+    <Compile Include="Problems\Problem7\Problem7.cs" />
+    <Compile Include="Problems\Problem6\Problem6.cs" />
+    <Compile Include="Problems\Problem5\Problem5.cs" />
+    <Compile Include="Problems\Problem4\Problem4.cs" />
+    <Compile Include="Problems\Problem3\Problem3.cs" />
+    <Compile Include="Problems\Problem2\Problem2.cs" />
+    <Compile Include="Problems\Problem1\Problem1.cs" />
+    <Compile Include="Problems\Problem9\Solution9.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +117,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

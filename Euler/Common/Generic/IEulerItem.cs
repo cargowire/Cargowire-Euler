@@ -5,15 +5,12 @@ using System.Text;
 
 namespace Cargowire.Euler.Common
 {
-    public interface IEulerItem<P,S>
+    public interface IEulerItem<P,S> : IEulerItem
     {
-        S ConfirmedAnswer { get; }
-        P Problem { get; }
-        S Solution { get; }
-        S Calculate();
-        S Calculate(out TimeSpan timeTaken);
-        string ShowWorkings(bool debug);
-        string ShowWorkings(bool debug, out TimeSpan timeTaken);
-        bool ValidSolution();
+        new S ConfirmedAnswer { get; }
+        new P Problem { get; }
+        new S Solution { get; }
+        new S Calculate();
+        new S Calculate(out TimeSpan timeTaken);
     }
 }

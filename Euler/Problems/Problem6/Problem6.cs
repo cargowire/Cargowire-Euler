@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Cargowire.Euler.Common;
+﻿using Cargowire.Euler.Common;
 
 namespace Cargowire.Euler.Problems
 {
@@ -29,19 +24,14 @@ Find the difference between the sum of the squares of the first one hundred natu
             }
         }
         
-        public override int Calculate()
+        public Problem6() :
+            this(new Solution6())
         {
-            int num = -1;
-            int sumOfSquares = 0;
-            int squareOfSums = 0;
-            for (int i = 1; i < 101; i++)
-            {
-                sumOfSquares += (i * i);
-                squareOfSums += i;
-            }
-            squareOfSums *= squareOfSums;
+        }
 
-            return System.Math.Abs(sumOfSquares - squareOfSums);
+        public Problem6(IProblemSolver<Problem6, int> solver)
+            : base((IProblemSolver<IEulerItem<string, int>, int>)solver)
+        {
         }
     }
 }

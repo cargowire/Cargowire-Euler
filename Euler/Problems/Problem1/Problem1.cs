@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Cargowire.Euler.Common;
+﻿using Cargowire.Euler.Common;
 
 namespace Cargowire.Euler.Problems
 {
@@ -14,7 +9,8 @@ namespace Cargowire.Euler.Problems
         {
             get { return CONFIRMED_ANSWER; }
         }
-        public override string Problem {
+        public override string Problem 
+        {
             get
             {
                 return @"If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
@@ -22,16 +18,15 @@ namespace Cargowire.Euler.Problems
 Find the sum of all the multiples of 3 or 5 below 1000.";
             }
         }
-        
-        public override int Calculate()
+
+        public Problem1() :
+            this(new Solution1())
         {
-            int ret = 0;
-            for (int i = 3; i < 1000; i++)
-            {
-                if(i % 3 == 0 || i % 5 == 0)
-                    ret += i;
-            }
-            return ret;
+        }
+
+        public Problem1(IProblemSolver<Problem1, int> solver)
+            : base((IProblemSolver<IEulerItem<string, int>, int>)solver)
+        {
         }
     }
 }
